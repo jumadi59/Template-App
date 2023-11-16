@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_error_no_internet2">Wah, koneksimu hilang!</string>
+    <string name="title_error_no_internet">Terjadi kesalahan koneksi</string>
+    <string name="description_error_no_internet">Silakan coba lagi</string>
+    <string name="title_error_general">Yah, ada sedikit masalah</string>
+    <string name="description_error_general">Tenang, kami sedang cari solusinya, kok. Mohon ditunggu, ya.</string>
+    <string name="title_msg_send_critics">Pesan Anda Sudah Terkirim!</string>
+    <string name="message_send_critics">Terima kasih untuk pesan kamu. Sudah terkirim</string>
+    <string name="title_empty_notify">Tidak ada notifikasi</string>
+    <string name="message_empty_notify">Notifikasi terbaru akan muncul disini</string>
+    <string name="title_empty_history">Tidak ada history</string>
+    <string name="message_empty_history_tiket">History transaksi tiket akan muncul disini</string>
+    <string name="message_empty_history_topup_kmt">History topup KMT akan muncul disini</string>
+    <string name="message_empty_history_kmt">History KMT akan muncul disini</string>
+    <string name="message_card_number_already_exists">Nomor kartu ini sudah ada!</string>
+    <string name="title_error_balance">Yah, saldo anda tidak mencukupi!</string>
+    <string name="message_error_balance">Silahkan Top Up E-Wallet anda dan transaksi ulang.</string>
+    <string name="message_success_insert_favorite">Berhasil menambahkan ke daftar favorit</string>
+    <string name="message_success_delete_favorite">Berhasil menghapus dari daftar favorit</string>
+    <string name="title_success_verification_email">Verifikasi Email Berhasil!</string>
+    <string name="message_success_verification_email_register">Verifikasi Email Berhasil, silahkan login!</string>
+    <string name="title_success_verification_phone">Verifikasi  Nomor Telpon Berhasil!</string>
+    <string name="message_success_verification_phone_register">Verifikasi  Nomor Telpon Berhasil, silahkan login!</string>
+    <string name="title_no_change_ticket">Tidak Ada perubahan tiket.</string>
+    <string name="title_empty_history_ongoing_ticket">Tidak ada history tiket berlangung.</string>
+    <string name="message_error_same_station_from_to">Stasiun awal atau tujuan tidak boleh sama.</string>
+    <string name="message_no_update_balance">Tidak ada update saldo!</string>
+    <string name="message_update_balance_failed">Update saldo gagal!</string>
+    <string name="title_not_logged_in">Anda belum masuk!</string>
+    <string name="message_not_logged_in">Untuk mengakses menu ini silakan login/daftar terlebih dahulu</string>
+    <string name="description_error_session_login">Saat ini Session login anda sudah habis. Silahkan Login Kembali.</string>
+    <string name="message_error_general">Terjadi kesalahan. Coba beberapa saat lagi.</string>
+    <string name="message_error_general_code">Terjadi kesalahan. Coba beberapa saat lagi. [%s]</string>
+    <string name="message_app_not_found">Aplikasi Gojek tidak ditemukan, Silahkan install atau login aplikasi Gojek untuk melakukan TopUp</string>
+    <string name="message_update_emaiL_or_phone">Silahkan login kembali untuk perubahan email atau nomor ponsel</string>
+    <string name="title_timeout">Ya, Ada sedikit gangguan</string>
+    <string name="title_compare_time_device">Waktu perangkat anda tidak sesuai dengan jaringan</string>
+    <string name="message_setting_time">Silahkan setting waktu perangkat anda</string>
+    <string name="message_ewallet_non_active2">Yuk hubungkan E-Wallet untuk mempermudah transaksi.</string>
+    <string name="title_update_profile_success">Update Profile Success</string>
+    <string name="message_empty_input_station_from_or_to">Stasiun awal atau tujuan tidak boleh kosong</string>
+    <string name="title_device_root">Root Mode</string>
+    <string name="message_device_root">Perangkat anda dalam kondisi root silahkan gunakan perangak tanpa root!</string>
+    <string name="message_ticket_ready">terdapat tiket yang sedang berlangsung, mohon selesaikan perjalanan anda</string>
+    <string name="title_success_update_ticket">Perubahan tiket success!</string>
+    <string name="title_success_cancel_ticket">Pembatalan tiket success!</string>
+    <string name="title_empty_info_line2">Tidak ada info jalur untuk hari ini</string>
+    <string name="title_empty_info_line">Tidak ada info jalur %s untuk hari ini</string>
+    <string name="message_empty_info_line">Info jalur untuk hari ini akan muncul disini</string>
+    <string name="title_error_permission_denied">Kasih Akses Dulu, Yuk!</string>
+    <string name="description_error_permission_denied">Berikan akses terlebih dahulu supaya kamu bisa menggunakan aplikasi ini</string>
+    <string name="title_verification_email">Verifikasi Email</string>
+    <string name="message_session_verification_email">Lanjutkan verifikasi email %s untuk mengakses semua fitur C-Access</string>
+    <string name="title_result_search_not_found">Hasil pencarian tidak ditemukan</string>
+    <string name="message_destination_search_not_found">Tujuan dari %s ke %s tidak ditemukan</string>
+    <string name="message_maximal_favorite">Stasiun Favorit telah diatas maksimal 5</string>
+    <string name="message_error_change_phone_number">Nomor telpon sebelumnya masih terhubung dengan %s silahkan putuskan!</string>
+
+    <string name="text_login">Login</string>
+    <string name="text_retry">Coba Lagi</string>
+</resources>

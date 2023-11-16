@@ -1,0 +1,25 @@
+<resources>
+    <dimen name="distance_xxxl">@dimen/_21sdp</dimen>
+    <dimen name="distance_xxl">@dimen/_16sdp</dimen>
+    <dimen name="distance_xl">@dimen/_14sdp</dimen>
+    <dimen name="distance_l">@dimen/_8sdp</dimen>
+    <dimen name="distance_m">@dimen/_6sdp</dimen>
+    <dimen name="distance_s">@dimen/_4sdp</dimen>
+    <dimen name="distance_xs">@dimen/_2sdp</dimen>
+
+    <dimen name="text_xxxl">@dimen/_21ssp</dimen>
+    <dimen name="text_xxl">@dimen/_17ssp</dimen>
+    <dimen name="text_xl">@dimen/_15ssp</dimen>
+    <dimen name="text_l">@dimen/_13ssp</dimen>
+    <dimen name="text_m">@dimen/_11ssp</dimen>
+    <dimen name="text_s">@dimen/_9ssp</dimen>
+    <dimen name="text_xs">@dimen/_7ssp</dimen>
+
+    <dimen name="radius_xxxl">35dp</dimen>
+    <dimen name="radius_xxl">27dp</dimen>
+    <dimen name="radius_xl">23dp</dimen>
+    <dimen name="radius_l">18dp</dimen>
+    <dimen name="radius_m">14dp</dimen>
+    <dimen name="radius_s">12dp</dimen>
+
+</resources>

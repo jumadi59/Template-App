@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="subtitle"
+            type="String" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/distance_l"
+        android:paddingBottom="38dp"
+        style="?attr/bottomSheetStyle"
+        tools:context=".ui.message.BottomSheetMessageFragment">
+
+
+        <ImageView
+            android:id="@+id/arrow_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            style="?attr/actionButtonStyle"
+            android:layout_gravity="end"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="@dimen/distance_l"
+            android:src="@drawable/ic_baseline_close_24"
+            tools:ignore="ContentDescription"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginStart="@dimen/distance_xxl"
+            android:layout_marginEnd="@dimen/distance_xxl"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/placeholder_circle"
+            android:layout_marginTop="@dimen/distance_l"
+            android:layout_marginBottom="@dimen/distance_xxl"/>
+
+        <TextView
+            isVisible="@{title != null}"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/distance_xxxl"
+            android:layout_marginEnd="@dimen/distance_xxxl"
+            android:textColor="@color/black"
+            android:text="@{title}"
+            android:textSize="@dimen/text_xl"
+            android:textStyle="bold"
+            android:gravity="center"
+            tools:text="Wah, koneksimu hilang!"
+            />
+
+        <TextView
+            isVisible="@{subtitle != null &amp;&amp; subtitle.length() > 0}"
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_m"
+            android:layout_marginTop="@dimen/distance_xs"
+            android:layout_marginStart="@dimen/distance_xxxl"
+            android:layout_marginEnd="@dimen/distance_xxxl"
+            android:text="@{subtitle}"
+            android:gravity="center"
+            tools:text="Terdapat kesalahan pada sistem"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            style="?attr/CustomButtonStyle"
+            android:id="@+id/btn_action"
+            android:layout_marginTop="@dimen/distance_xl"
+            android:layout_marginBottom="@dimen/distance_m"
+            android:layout_marginStart="@dimen/distance_xxl"
+            android:layout_marginEnd="@dimen/distance_xxl"
+            android:text="Coba Lagi"/>
+
+
+    </LinearLayout>
+</layout>

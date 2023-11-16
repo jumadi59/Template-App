@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace 'com.dika.app.antarmoda.ui'
+    compileSdk rootProject.targetSdk
+
+    defaultConfig {
+        minSdk rootProject.minSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig = false
+    }
+
+    flavorDimensions 'buildTerget'
+    productFlavors {
+        dev {
+            dimension 'buildTerget'
+            externalNativeBuild.ndkBuild.arguments "BUILD_TARGET=dev"
+        }
+        prod {
+            dimension 'buildTerget'
+            externalNativeBuild.ndkBuild.arguments "BUILD_TARGET=prod"
+        }
+    }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src\\main\\res'
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    implementation project(":core")
+    implementation project(":common")
+
+    implementation 'androidx.paging:paging-runtime-ktx:3.2.1'
+
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'com.github.bumptech.glide:annotations:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+    kapt 'com.github.bumptech.glide:annotations:4.15.1'
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.15.1') {
+        exclude group: 'glide-parent'
+    }
+
+    implementation "com.facebook.shimmer:shimmer:0.5.0@aar"
+
+
+    implementation 'cn.carbswang.android:NumberPickerView:1.2.0'
+    implementation 'com.isseiaoki:simplecropview:1.1.8'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

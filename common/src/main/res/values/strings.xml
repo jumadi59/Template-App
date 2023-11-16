@@ -1,0 +1,7 @@
+<resources>
+    <string name="discount">Diskon %s</string>
+    <string name="chose_photo">Pilih Foto</string>
+    <string name="gallery">Galeri</string>
+    <string name="camera">Kamera</string>
+    <string name="version">Versi %s (%s)</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="placeholder_color">#dddddd</color>
+
+    <color name="colorBgImage">#4f4f4f</color>
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+
+    <color name="light_100">#FFFFFF</color>
+    <color name="light_80">#FCFCFC</color>
+    <color name="light_60">#F1F1FA</color>
+    <color name="light_40">#E3E5E5</color>
+    <color name="light_20">#91919F</color>
+
+    <color name="dark_100">#0D0E0F</color>
+    <color name="dark_75">#161719</color>
+    <color name="dark_50">#212325</color>
+    <color name="dark_25">#292B2D</color>
+
+    <color name="violet_100">#7F3DFF</color>
+    <color name="violet_80">#8F57FF</color>
+    <color name="violet_60">#B18AFF</color>
+    <color name="violet_40">#D3BDFF</color>
+    <color name="violet_20">#EEE5FF</color>
+
+    <color name="green_100">#00A86B</color>
+    <color name="green_80">#2AB784</color>
+    <color name="green_60">#65D1AA</color>
+    <color name="green_40">#93EACA</color>
+    <color name="green_20">#CFFAEA</color>
+
+    <color name="red_100">#FD3C4A</color>
+    <color name="red_80">#FD5662</color>
+    <color name="red_60">#FD6F7A</color>
+    <color name="red_40">#FDA2A9</color>
+    <color name="red_20">#FDD5D7</color>
+
+    <color name="blue_100">#0077FF</color>
+    <color name="blue_80">#248AFF</color>
+    <color name="blue_60">#57A5FF</color>
+    <color name="blue_40">#8AC0FF</color>
+    <color name="blue_20">#BDDCFF</color>
+
+    <color name="yellow_100">#FCAC12</color>
+    <color name="yellow_80">#FCBB3C</color>
+    <color name="yellow_60">#FCCC6F</color>
+    <color name="yellow_40">#FCDDA1</color>
+    <color name="yellow_20">#FCEED4</color>
+</resources>

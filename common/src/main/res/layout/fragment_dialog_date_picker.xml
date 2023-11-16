@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/distance_xl"
+        android:paddingEnd="@dimen/distance_xxl"
+        android:paddingStart="@dimen/distance_xxl"
+        android:paddingBottom="@dimen/distance_xxl"
+        android:background="@drawable/background_round"
+        android:layout_margin="@dimen/distance_xl">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_xxxl"
+                android:layout_marginStart="@dimen/distance_xl"
+                android:layout_marginEnd="@dimen/distance_xl"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <cn.carbswang.android.numberpickerview.library.NumberPickerView
+                    android:id="@+id/picker_day"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="180dp"
+                    android:layout_below="@id/tv_title"
+                    android:layout_centerHorizontal="true"
+                    app:npv_ItemPaddingHorizontal="@dimen/distance_l"
+                    app:npv_ItemPaddingVertical="@dimen/distance_l"
+                    app:npv_RespondChangeOnDetached="false"
+                    app:npv_ShowDivider="false"
+                    app:npv_ShownCount="4"
+                    app:npv_TextColorSelected="?colorPrimary"
+                    app:npv_TextSizeNormal="@dimen/_16ssp"
+                    app:npv_TextSizeSelected="@dimen/_24ssp"
+                    app:npv_WrapSelectorWheel="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold"
+                    android:text="-"/>
+
+                <cn.carbswang.android.numberpickerview.library.NumberPickerView
+                    android:id="@+id/picker_month"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="180dp"
+                    android:layout_below="@id/tv_title"
+                    android:layout_centerHorizontal="true"
+                    app:npv_ItemPaddingHorizontal="@dimen/distance_l"
+                    app:npv_ItemPaddingVertical="@dimen/distance_l"
+                    app:npv_RespondChangeOnDetached="false"
+                    app:npv_ShowDivider="false"
+                    app:npv_ShownCount="4"
+                    app:npv_TextColorSelected="?colorPrimary"
+                    app:npv_TextSizeNormal="@dimen/_16ssp"
+                    app:npv_TextSizeSelected="@dimen/_24ssp"
+                    app:npv_WrapSelectorWheel="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold"
+                    android:text="-"/>
+
+                <cn.carbswang.android.numberpickerview.library.NumberPickerView
+                    android:id="@+id/picker_year"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="180dp"
+                    android:layout_below="@id/tv_title"
+                    android:layout_centerHorizontal="true"
+                    app:npv_ItemPaddingHorizontal="@dimen/distance_l"
+                    app:npv_ItemPaddingVertical="@dimen/distance_l"
+                    app:npv_RespondChangeOnDetached="false"
+                    app:npv_ShowDivider="false"
+                    app:npv_ShownCount="4"
+                    app:npv_TextColorSelected="?colorPrimary"
+                    app:npv_TextSizeNormal="@dimen/_16ssp"
+                    app:npv_TextSizeSelected="@dimen/_24ssp"
+                    app:npv_WrapSelectorWheel="true" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/distance_xl"
+                android:layout_gravity="top"
+                android:background="@drawable/background_gradient_picker_top"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/background_gradient_picker_bottom" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_l"
+                android:layout_gravity="center_horizontal"
+                tools:text="Sen, 24 Okt 2022" />
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="?CustomTimePickerButtonStyle"
+            android:layout_marginTop="@dimen/distance_l"
+            android:layout_marginBottom="@dimen/distance_l"
+            android:text="@android:string/ok"
+            app:backgroundTint="?colorPrimary"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

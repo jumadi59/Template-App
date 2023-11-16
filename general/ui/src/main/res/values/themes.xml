@@ -1,0 +1,176 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary_100</item>
+        <item name="colorPrimaryContainer">@color/primary_60</item>
+        <item name="colorAccent">@color/blue_80</item>
+        <item name="android:statusBarColor">@color/blue_80</item>
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+
+        <item name="CustomButtonStyle">@style/Theme.Button</item>
+        <item name="CustomTimePickerButtonStyle">@style/Theme.Button</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/AppShapeAppearance.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/AppShapeAppearance.LargeComponent</item>
+        <item name="android:buttonStyle">@style/Theme.Button</item>
+    </style>
+
+    <style name="Theme.App" parent="Base.Theme.App" />
+
+    <style name="TextContent" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextContent.BottomNav">
+        <item name="android:textSize">@dimen/text_s</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="TextContent.Toolbar">
+        <item name="android:textSize">@dimen/text_l</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.Input" parent="">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">@dimen/text_s</item>
+    </style>
+
+    <style name="Theme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="Theme.ButtonOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="strokeColor">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.KRLAccess.FloatingActionButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">36%</item>
+    </style>
+
+    <style name="AppShapeAppearance.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="AppShapeAppearance.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="AppShapeAppearance.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.TextInputLayoutRound" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearance">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">@dimen/text_m</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textColorHint">@color/light_20</item>
+        <item name="android:textAppearance">@style/Theme.Input</item>
+        <item name="boxStrokeErrorColor">@color/red_100</item>
+        <item name="errorTextColor">@color/red_100</item>
+        <item name="errorIconTint">@color/red_100</item>
+    </style>
+
+    <style name="Theme.TextInputLayout.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="shapeAppearance">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">@dimen/text_m</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textColorHint">@color/light_20</item>
+        <item name="android:textAppearance">@style/Theme.Input</item>
+        <item name="boxStrokeErrorColor">@color/red_100</item>
+        <item name="errorTextColor">@color/red_100</item>
+        <item name="errorIconTint">@color/red_100</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/transparent</item>
+        <item name="bottomSheetStyle">@style/Widget.App.BottomSheetDialog.Modal</item>
+        <item name="android:navigationBarColor" tools:ignore="NewApi">?attr/colorSurface</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">
+            @android:color/transparent
+        </item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="Widget.App.BottomSheetDialog.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/AppShapeAppearance.BottomSheetDialog</item>
+    </style>
+
+    <style name="AppShapeAppearance.BottomSheetDialog" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/radius_xl</item>
+        <item name="cornerSizeTopRight">@dimen/radius_xl</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_l</item>
+    </style>
+
+    <style name="TextAppearance.App.Input" parent="">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">@dimen/text_m</item>
+    </style>
+
+    <style name="TextAppearance.App.Small" parent="">
+        <item name="android:textSize">@dimen/text_m</item>
+        <item name="android:padding">6dp</item>
+    </style>
+
+    <style name="TextAppearance.App.Normal" parent="">
+        <item name="android:textSize">@dimen/text_m</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="TextAppearance.App.Big" parent="">
+        <item name="android:textSize">@dimen/text_l</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.FloatingActionButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
+</resources>
