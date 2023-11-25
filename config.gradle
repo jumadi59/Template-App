@@ -1,0 +1,34 @@
+ext {
+
+    def configFile = file('config.properties')
+    Properties prop = new Properties()
+    if (configFile.canRead()) {
+        prop.load(new FileInputStream(configFile))
+    } else {
+        prop['VERSION_CODE']='1'
+    }
+    def code = prop['VERSION_CODE'].toInteger() + 1
+    // X.Y.Z; X = Major, Y = minor, Z = Patch level
+    def z = (code % 100).toInteger()
+    def y = (code / 100).toInteger()
+    def x = (y / 10).toInteger() + 1
+    def codeName = x.toString() + "." + y.toString() + "." + z.toString()
+
+    prop['VERSION_CODE']=code.toString()
+    prop['VERSION_NAME']=codeName
+    prop.store(configFile.newWriter(), null)
+
+    config = [
+            'APP_NAME': prop['APP_NAME'],
+            'DEFAULT_ACTIVITY': '"com.jumadi.template.app.MainActivity',
+            'VERSION_CODE': code,
+            'VERSION_NAME': codeName,
+            'MIN_SDK': 21,
+            'TARGET_SDK': 33,
+
+            'KEY_ALIAS': prop['KEY_ALIAS'],
+            'KEY_PASSWORD': prop['KEY_PASSWORD'],
+            'STORE_PASSWORD': prop['STORE_PASSWORD'],
+    ]
+
+}

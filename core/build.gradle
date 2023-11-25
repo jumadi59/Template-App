@@ -8,13 +8,13 @@ plugins {
 
 android {
     namespace 'com.app.core'
-    compileSdk rootProject.targetSdk
+    compileSdk rootProject.ext.config['TARGET_SDK']
 
     defaultConfig {
-        minSdk rootProject.minSdk
-        buildConfigField "String", "VERSION_NAME", "\"${rootProject.versionName}\""
-        buildConfigField "Integer", "VERSION_CODE", "${rootProject.versionCode}"
-        buildConfigField "String", "DEFAULT_ACTIVITY", "\"${rootProject.defaultActity}\""
+        minSdk rootProject.ext.config['MIN_SDK']
+        buildConfigField "String", "VERSION_NAME", "\"${rootProject.ext.config['VERSION_NAME']}\""
+        buildConfigField "Integer", "VERSION_CODE", "${rootProject.ext.config['VERSION_CODE']}"
+        buildConfigField "String", "DEFAULT_ACTIVITY", "\"${rootProject.ext.config['DEFAULT_ACTIVITY']}\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

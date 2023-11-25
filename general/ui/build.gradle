@@ -7,10 +7,10 @@ plugins {
 
 android {
     namespace 'com.dika.app.antarmoda.ui'
-    compileSdk rootProject.targetSdk
+    compileSdk rootProject.ext.config['TARGET_SDK']
 
     defaultConfig {
-        minSdk rootProject.minSdk
+        minSdk rootProject.ext.config['MIN_SDK']
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

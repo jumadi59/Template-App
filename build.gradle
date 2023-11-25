@@ -6,12 +6,4 @@ plugins {
     id 'com.google.dagger.hilt.android' version '2.46' apply false
 }
 
-ext {
-
-    appName = "Template App"
-    targetSdk = 34
-    minSdk = 26
-    versionCode = 1
-    versionName = "0.0.1"  // X.Y.Z; X = Major, Y = minor, Z = Patch level
-    defaultActity = "com.jumadi.template.app.MainActivity"
-}
+apply from: "config.gradle"
