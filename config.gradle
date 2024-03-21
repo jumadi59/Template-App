@@ -20,7 +20,7 @@ ext {
 
     config = [
             'APP_NAME': prop['APP_NAME'],
-            'DEFAULT_ACTIVITY': '"com.jumadi.template.app.MainActivity',
+            'DEFAULT_ACTIVITY': '"com.jumadi.template.app.MainActivity"',
             'VERSION_CODE': code,
             'VERSION_NAME': codeName,
             'MIN_SDK': 21,

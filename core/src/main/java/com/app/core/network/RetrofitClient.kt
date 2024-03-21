@@ -1,6 +1,7 @@
 package com.app.core.network
 
 import android.annotation.SuppressLint
+import android.content.Context
 import com.app.core.util.Environment
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -10,7 +11,9 @@ import okhttp3.ResponseBody.Companion.toResponseBody
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.io.IOException
+import java.net.ConnectException
 import java.net.UnknownHostException
 import java.security.SecureRandom
 import java.security.cert.CertificateException
@@ -30,24 +33,26 @@ import kotlin.reflect.KClass
  * Bengkulu, Indonesia.
  * Copyright (c) Company. All rights reserved.
  **/
-open class RetrofitClient @Inject constructor(private val environment: Environment, private val level: HttpLoggingInterceptor.Level = HttpLoggingInterceptor.Level.NONE) {
+open class RetrofitClient @Inject constructor(private val environment: Environment, private val level: HttpLoggingInterceptor.Level = HttpLoggingInterceptor.Level.NONE, val isPlan: Boolean = false) {
 
     private val interceptors = ArrayList<Interceptor>()
 
-    fun addInterceptor(interceptor: Interceptor) : RetrofitClient{
+    fun addInterceptor(interceptor: Interceptor) {
         if (interceptors.find { it == interceptor } == null) {
             interceptors.add(interceptor)
         }
-        return this
     }
 
-    fun getClient() = getUnsafeOkHttpClient().addInterceptor(HttpLoggingInterceptor().apply {
+    fun getClient() = (if (isPlan) getUnsafeOkHttpClient() else OkHttpClient.Builder()).addInterceptor(HttpLoggingInterceptor().apply {
         level = this@RetrofitClient.level
     }).addInterceptor(Interceptor { chain ->
+
         val request = chain.request().newBuilder()
             .addHeader("Accept", "application/json")
             .addHeader("Content-Type", "application/json")
-            .addHeader("Accept-Language", Locale.getDefault().language).build()
+            .addHeader("Accept-Language", Locale.getDefault().language)
+            .build()
+        //.addHeader("Cache-Control", "public, only-if-cached, max-stale=" + 2).build()
         try {
             val response = chain.proceed(request)
             response
@@ -56,8 +61,16 @@ open class RetrofitClient @Inject constructor(private val environment: Environme
                 .request(chain.request())
                 .protocol(Protocol.HTTP_1_1)
                 .code(0)
-                .message(e.message?:"Error")
+                .message("No address associated with hostname")
                 .body("No address associated with hostname".toResponseBody(null))
+                .build()
+        } catch (e: ConnectException) {
+            Response.Builder()
+                .request(chain.request())
+                .protocol(Protocol.HTTP_1_1)
+                .code(1)
+                .message("Connection Error")
+                .body(e.toString().toResponseBody(null))
                 .build()
         } catch (e: IOException) {
             e.printStackTrace()
@@ -65,7 +78,7 @@ open class RetrofitClient @Inject constructor(private val environment: Environme
                 .request(chain.request())
                 .protocol(Protocol.HTTP_1_1)
                 .code(408)
-                .message(e.message?:"Timeout")
+                .message("Timeout")
                 .body(e.toString().toResponseBody(null))
                 .build()
         }
@@ -84,20 +97,22 @@ open class RetrofitClient @Inject constructor(private val environment: Environme
         baseUrl(environment.getBaseApi() + "/$path/")
         client(getClient().build())
         addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(ScalarsConverterFactory.create())
     }.build().create(klazz.java)
 
     fun <T : Any> getRetrofit(klazz: KClass<T>, baseUrl: String): T = Retrofit.Builder().apply {
         baseUrl(baseUrl)
         client(getClient().build())
         addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(ScalarsConverterFactory.create())
     }.build().create(klazz.java)
 
     fun <T : Any> getRetrofit(klazz: KClass<T>, client: OkHttpClient): T = Retrofit.Builder().apply {
         baseUrl(environment.getBaseApi())
         client(client)
         addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(ScalarsConverterFactory.create())
     }.build().create(klazz.java)
-
 
     private fun getUnsafeOkHttpClient(): OkHttpClient.Builder {
         return try {
